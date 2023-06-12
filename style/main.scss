@@ -63,7 +63,7 @@
                         text-decoration: none;
                         font-size: 16px;
                         font-weight: 600;
-                        color: #131313;
+                        color: #121615;
                         transition: 0.3s ease;
                     }
 
@@ -131,6 +131,79 @@
     }
 }
 
+
+
+// sub form
+
+.form {
+    min-height: 100vh;
+    background-color: #FDFEF3;
+
+    .sub {
+        text-align: center;
+        padding: 250px 0;
+
+        .sub-info {
+            padding-bottom: 50px;
+
+            h1 {
+                font-size: 30px;
+                font-weight: 800;
+                color: #121615;
+            }
+        }
+
+        .sub-form {
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            gap: 10px;
+
+            input {
+                padding: 10px;
+                width: 360px;
+                height: 100%;
+                border: 2px solid #121615;
+                background: #121615;
+                border-radius: 5px;
+                color: #FDFEF3;
+                font-size: 18px;
+                outline: none;
+                transition: all 0.3s ease;
+            }
+
+            input:focus {
+                border-radius: 0;
+                border: none;
+                border-bottom: 2px solid #121615;
+                background-color: transparent;
+                color: #121615;
+            }
+
+            button {
+                padding: 10px;
+                height: 100%;
+                border: 2px solid #121615;
+                background-color: #121615;
+                color: #FDFEF3;
+                font-weight: 500;
+                font-size: 18px;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+
+            button:hover {
+                background-color: transparent;
+                color: #121615;
+            }
+
+        }
+    }
+}
+
+
+
 // footer
 
 .footer {
@@ -184,12 +257,30 @@
                 color: #FDFEF3;
             }
 
-            a {
-                display: table;
-                color: #FDFEF3;
-                font-weight: 500;
-                padding-bottom: 8px;
-                text-decoration: none;
+            .icon {
+                display: flex;
+                gap: 25px;
+                justify-content: center;
+                align-items: center;
+
+                a {
+                    border: 1px solid #FDFEF3;
+                    border-radius: 100%;
+                    background-color: #FDFEF3;
+                    color: #121615;
+                    text-decoration: none;
+                    transition: 0.3s ease;
+
+                    i {
+                        padding: 10px;
+                        font-size: 24px;
+                    }
+                }
+
+                a:hover {
+                    background-color: transparent;
+                    color: #FDFEF3;
+                }
             }
         }
     }
@@ -207,6 +298,48 @@
 
 
 // @media 
+
+@media screen and (max-width: 940px) {
+    .home {
+        .container {
+            width: 90%;
+
+            .header {
+
+                .nav {
+                    i {
+                        display: flex;
+                    }
+
+                    ul {
+                        display: none;
+                    }
+                }
+            }
+
+        }
+    }
+
+    .form {
+        .sub {
+            .sub-form {
+                text-align: center;
+                display: grid;
+                grid-template-columns: 1fr;
+
+                input {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .footer {
+        .footer-info {
+            display: grid;
+        }
+    }
+}
 
 @media screen and (max-width: 480px) {
     .home {

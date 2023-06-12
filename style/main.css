@@ -57,7 +57,7 @@
   text-decoration: none;
   font-size: 16px;
   font-weight: 600;
-  color: #131313;
+  color: #121615;
   transition: 0.3s ease;
 }
 .home .header .nav ul li .active {
@@ -100,6 +100,64 @@
   width: 150px;
 }
 
+.form {
+  min-height: 100vh;
+  background-color: #FDFEF3;
+}
+.form .sub {
+  text-align: center;
+  padding: 250px 0;
+}
+.form .sub .sub-info {
+  padding-bottom: 50px;
+}
+.form .sub .sub-info h1 {
+  font-size: 30px;
+  font-weight: 800;
+  color: #121615;
+}
+.form .sub .sub-form {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  gap: 10px;
+}
+.form .sub .sub-form input {
+  padding: 10px;
+  width: 360px;
+  height: 100%;
+  border: 2px solid #121615;
+  background: #121615;
+  border-radius: 5px;
+  color: #FDFEF3;
+  font-size: 18px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+.form .sub .sub-form input:focus {
+  border-radius: 0;
+  border: none;
+  border-bottom: 2px solid #121615;
+  background-color: transparent;
+  color: #121615;
+}
+.form .sub .sub-form button {
+  padding: 10px;
+  height: 100%;
+  border: 2px solid #121615;
+  background-color: #121615;
+  color: #FDFEF3;
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.form .sub .sub-form button:hover {
+  background-color: transparent;
+  color: #121615;
+}
+
 .footer {
   background-color: #121615;
   color: #FDFEF3;
@@ -139,12 +197,27 @@
   padding-bottom: 20px;
   color: #FDFEF3;
 }
-.footer .footer-info .social a {
-  display: table;
-  color: #FDFEF3;
-  font-weight: 500;
-  padding-bottom: 8px;
+.footer .footer-info .social .icon {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  align-items: center;
+}
+.footer .footer-info .social .icon a {
+  border: 1px solid #FDFEF3;
+  border-radius: 100%;
+  background-color: #FDFEF3;
+  color: #121615;
   text-decoration: none;
+  transition: 0.3s ease;
+}
+.footer .footer-info .social .icon a i {
+  padding: 10px;
+  font-size: 24px;
+}
+.footer .footer-info .social .icon a:hover {
+  background-color: transparent;
+  color: #FDFEF3;
 }
 .footer .border-b {
   width: 100%;
@@ -155,6 +228,28 @@
   padding: 20px 0 20px;
 }
 
+@media screen and (max-width: 940px) {
+  .home .container {
+    width: 90%;
+  }
+  .home .container .header .nav i {
+    display: flex;
+  }
+  .home .container .header .nav ul {
+    display: none;
+  }
+  .form .sub .sub-form {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .form .sub .sub-form input {
+    width: 100%;
+  }
+  .footer .footer-info {
+    display: grid;
+  }
+}
 @media screen and (max-width: 480px) {
   .home .container {
     width: 90%;
